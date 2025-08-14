@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ perfil.nombre }}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8" />
+  <title>Xenon</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <h1>{{ perfil.nombre }}</h1>
-    <p>{{ perfil.descripcion }}</p>
-    
+    <h1>Xenon</h1>
+    <p>Programador dedicado al desarrollo de páginas webs, bots entre otras cosas.</p>
+
     <nav class="header-nav">
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#trabajos">Trabajos</a>
@@ -21,33 +21,33 @@
 
   <section class="container" id="sobre-mi">
     <h2>Sobre mí</h2>
-    <p>{{ perfil.sobre_mi }}</p>
+    <p>Soy un programador dedicado actualmente al desarrollo de páginas webs y bots para la plataforma de Discord entre otros servicios más.</p>
   </section>
 
   <section class="container" id="trabajos">
-  <h2>Trabajos</h2>
-  <div class="card-grid">
-    {% for proyecto in perfil.proyectos %}
-    <div class="card">
-      <h3>{{ proyecto.titulo }}</h3>
-      <p>{{ proyecto.descripcion }}</p>
+    <h2>Trabajos</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Portafolio personal</h3>
+        <p>Diseño y desarrollo de mi portafolio personal usando HTML y CSS.</p>
+      </div>
+      <div class="card">
+        <h3>Clon de Google</h3>
+        <p>Un clon simple del buscador de Google como práctica de maquetación.</p>
+      </div>
     </div>
-    {% endfor %}
-  </div>
-</section>
-
+  </section>
 
   <section class="container" id="resenas">
     <h2>Reseñas</h2>
     <ul>
-      {% for resena in perfil.resenas %}
-        <li>{{ resena }}</li>
-      {% endfor %}
+      <li>Excelente trabajo, muy profesional.</li>
+      <li>Entrega rápida y con buena comunicación.</li>
     </ul>
   </section>
 
   <footer>
-    <p>© {{ perfil.nombre }} — {{ now.year }}</p>
+    <p>© Xenon — 2025</p>
   </footer>
 
 </body>
