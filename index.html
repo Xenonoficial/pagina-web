@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ perfil.nombre }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header>
+    <h1>{{ perfil.nombre }}</h1>
+    <p>{{ perfil.descripcion }}</p>
+    
+    <nav class="header-nav">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="https://discord.com/users/1237883157966229524" target="_blank" rel="noopener noreferrer">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="container" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>{{ perfil.sobre_mi }}</p>
+  </section>
+
+  <section class="container" id="trabajos">
+  <h2>Trabajos</h2>
+  <div class="card-grid">
+    {% for proyecto in perfil.proyectos %}
+    <div class="card">
+      <h3>{{ proyecto.titulo }}</h3>
+      <p>{{ proyecto.descripcion }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+  <section class="container" id="resenas">
+    <h2>Reseñas</h2>
+    <ul>
+      {% for resena in perfil.resenas %}
+        <li>{{ resena }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <footer>
+    <p>© {{ perfil.nombre }} — {{ now.year }}</p>
+  </footer>
+
+</body>
+</html>
