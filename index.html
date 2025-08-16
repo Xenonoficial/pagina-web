@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <title>Xenon</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
 
   <header>
-    <h1>Xenon</h1>
+    <div class="logo-container">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Xenon" class="logo-img" />
+      <h1>Xenon</h1>
+    </div>
     <p>Programador dedicado al desarrollo de páginas webs, bots entre otras cosas.</p>
 
     <nav class="header-nav">
@@ -36,7 +39,7 @@
         <p>Este bot fue utilizado un tiempo en la comunidad de "Todo sobre discord" el mismo contaba con comandos de moderación y otras opciónes más.</p>
       </div>
       <div class="card">
-        <h3>Imperial Motors</h3>
+        <h3>Imperial Motors|Bot</h3>
         <p>Bot hecho para una empresa de roleplay dentro de la comunidad de TIERRA MEXICO RP</p>
       </div>
       <div class="card">

@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 from datetime import datetime
 
 app = Flask(__name__)
@@ -25,7 +25,7 @@ perfil = {
             'descripcion': 'Este bot fue utilizado un tiempo en la comunidad de "Todo sobre discord" el mismo contaba con comandos de moderación y otras opciónes más.'
         },
         {
-            'titulo': 'Imperial Motora|Bot',
+            'titulo': 'Imperial Motors|Bot',
             'descripcion': 'Bot hecho para una empresa de roleplay dentro de la comunidad de TIERRA MEXICO RP.'
         },
         {
