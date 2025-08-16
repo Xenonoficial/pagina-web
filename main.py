@@ -23,6 +23,14 @@ perfil = {
         {
             'titulo': 'Todo sobre discol|Bot',
             'descripcion': 'Este bot fue utilizado un tiempo en la comunidad de "Todo sobre discord" el mismo contaba con comandos de moderación y otras opciónes más.'
+        },
+        {
+            'titulo': 'Panel de administración web',
+            'descripcion': 'Panel de administración hecho en Flask y Bootstrap para gestionar contenido dinámico y usuarios de forma eficiente.'
+        },
+        {
+            'titulo': 'Bot de soporte automático',
+            'descripcion': 'Bot desarrollado para brindar soporte 24/7 mediante respuestas automatizadas y sistema de tickets con logs.'
         }
     ]
 }
